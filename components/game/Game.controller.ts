@@ -1,5 +1,5 @@
 import { v4 } from 'https://deno.land/std/uuid/mod.ts'
-import Game from './Game.controller.ts'
+import { Game } from './Game.interface.ts'
 
 let games: Game[] = [
   {
@@ -13,9 +13,9 @@ let games: Game[] = [
 
 const getGamesList = ({ response }: { response: any }) => {
   response.body = {
-    data: {
-      list: games,
-      success: true
-    }
+      success: true,
+      data: games
   }
 }
+
+export { getGamesList }
