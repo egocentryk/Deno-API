@@ -8,7 +8,7 @@ let games: Game[] = [
     description: 'Third person action RPG',
     company: 'CD Project RED',
     platform: 'PS4, PS5, Xbox One X, Xbox Series X'
-  };
+  },
 ];
 
 const getGamesList = ({ response }: { response: any }) => {
