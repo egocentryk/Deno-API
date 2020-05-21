@@ -6,6 +6,7 @@ const router = new Router({ prefix: '/api/v1' })
 router.get('/games', GameController.getGamesList)
 router.get('/games/:id', GameController.getGame)
 router.post('games', GameController.addGame)
+router.put('/games/:id', GameController.updateGame)
 router.delete('/games/:id', GameController.deleteGame)
 
 export default router;

@@ -1,6 +1,6 @@
 export interface Game {
   id: string;
-  name: string;
+  title: string;
   description: string;
   company: string;
   platform: string[];
