@@ -11,11 +11,14 @@ let games: Game[] = [
   },
 ];
 
-const getGamesList = ({ response }: { response: any }) => {
-  response.body = {
-      success: true,
-      data: games
+export default class GameController {
+
+  static getGamesList = ({ response }: { response: any }) => {
+    response.body = {
+        data: {
+          games
+        },
+        success: true
+    }
   }
 }
-
-export { getGamesList }

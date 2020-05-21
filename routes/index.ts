@@ -1,8 +1,8 @@
 import { Router } from 'https://deno.land/x/oak/mod.ts'
-import { getGamesList } from './Game.controller.ts'
+import GameController from '../components/game/Game.controller.ts'
 
 const router = new Router({ prefix: '/api/v1' })
 
-router.get('/games', getGamesList);
+router.get('/games', GameController.getGamesList);
 
 export default router;

@@ -1,5 +1,5 @@
 import { Application } from 'https://deno.land/x/oak/mod.ts'
-import router from './components/game/Game.routes.ts'
+import router from './routes/index.ts'
 
 const port = 5000
 
