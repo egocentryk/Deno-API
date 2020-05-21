@@ -35,4 +35,14 @@ export default class GameController {
         success: true
     }
   }
+
+  static deleteGame = ({ params, response}: { params: { id: string }, response: any }) => {
+    games = games.filter(g => g.id !== params.id)
+    response.body = {
+      data: {
+        message: 'Game successfully deleted',
+        success: true
+      }
+    }
+  }
 }
