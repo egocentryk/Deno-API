@@ -8,6 +8,7 @@ deno run --allow-net server.ts
 ## Routes
 ```
 GET      /api/v1/games
+GET      /api/v1/games/:id
 POST     /api/v1/games
 DELETE   /api/v1/games/:id
 ```
