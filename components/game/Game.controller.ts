@@ -29,10 +29,36 @@ export default class GameController {
 
   static getGamesList = ({ response }: { response: any }) => {
     response.body = {
+      data: {
+        games
+      },
+      success: true
+    }
+  }
+
+  static addGame = async ({ request, response }: { request: any, response: any }) => {
+    const body = await request.body()
+
+    if (request.body) {
+      const game: Game = body.value
+
+      game.id = v4.generate()
+      games.push(game)
+      response.status = 201
+      response.body = {
         data: {
           games
         },
         success: true
+      }
+    } else {
+      response.status = 400
+      response.body = {
+        data: {
+          message: 'No game data to work with found'
+        },
+        success: false
+      }
     }
   }
 
