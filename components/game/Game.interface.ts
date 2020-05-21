@@ -3,5 +3,5 @@ export interface Game {
   name: string;
   description: string;
   company: string;
-  platform: string;
+  platform: string[];
 }
